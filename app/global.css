@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Link-Saver';
+    src: url('../public/fonts/Glancyr-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Link-Saver';
+    src: url('../public/fonts/Glancyr-Medium.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Link-Saver';
+    src: url('../public/fonts/Glancyr-SemiBold.otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Link-Saver';
+    src: url('../public/fonts/Glancyr-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
