@@ -1,6 +1,6 @@
 import { cva, VariantProps } from "cva";
 
-const textStyles = cva([], {
+export const textStyles = cva([], {
     variants: {
         font: {
             saver: 'font-saver'
@@ -22,10 +22,9 @@ const textStyles = cva([], {
     }
 })
 
-type textStylesProps = VariantProps<typeof textStyles>
+export type textStylesProps = VariantProps<typeof textStyles>
 
-export interface TextProps
-    extends React.HtmlHTMLAttributes<HTMLParagraphElement> {
+export interface TextProps extends React.HtmlHTMLAttributes<HTMLParagraphElement> {
     variant: `${NonNullable<textStylesProps['font']>}/${NonNullable<textStylesProps['size']>}`
     color?: `${NonNullable<textStylesProps['color']>}`
 }
