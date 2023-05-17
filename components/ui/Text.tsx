@@ -9,9 +9,11 @@ export const textStyles = cva([], {
         size: {
             small: 'text-xs',
             base: 'text-base',
-            xl: 'text-xl',
-            doubleXl: 'text-2xl',
-            tripleXl: 'text-3xl'
+            normal: 'text-xl',
+            medium: 'text-2xl',
+            big: 'text-3xl',
+            large: 'text-4xl',
+            vlarge: 'text-5xl'
         },
 
         color: {
