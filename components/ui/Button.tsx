@@ -4,7 +4,7 @@ const buttonStyles = cva(['outline outline-1 transition-all active:shadow active
     variants: {
         intents: {
             filled: [
-                'bg-main text-black shadow-3xl font-saver'
+                'bg-pink text-black shadow-3xl font-saver'
             ],
 
             outlin: [

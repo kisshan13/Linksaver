@@ -17,7 +17,7 @@ export const textStyles = cva([], {
         color: {
             black: 'text-black',
             white: 'text-white',
-            main: 'text-main'
+            main: 'text-pink'
         }
     }
 })
