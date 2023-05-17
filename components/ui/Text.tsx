@@ -27,11 +27,11 @@ export const textStyles = cva([], {
 export type textStylesProps = VariantProps<typeof textStyles>
 
 export interface TextProps extends React.HtmlHTMLAttributes<HTMLParagraphElement> {
-    variant: `${NonNullable<textStylesProps['font']>}/${NonNullable<textStylesProps['size']>}`
+    variant?: `${NonNullable<textStylesProps['font']>}/${NonNullable<textStylesProps['size']>}`
     color?: `${NonNullable<textStylesProps['color']>}`
 }
 
-export default function Text({ variant, color = 'black', children, className, ...props }: TextProps) {
+export default function Text({ variant='saver/normal', color = 'white', children, className, ...props }: TextProps) {
 
     const [font, size] = variant.split('/') as [textStylesProps['font'], textStylesProps['size']]
 

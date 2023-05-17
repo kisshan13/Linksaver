@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { textStyles, textStylesProps } from "./Text";
+import { textStyles, textStylesProps } from "./text";
 
 type HeadingType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 

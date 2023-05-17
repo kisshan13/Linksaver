@@ -1,4 +1,4 @@
-import { textStyles, textStylesProps } from "./Text";
+import { textStyles, textStylesProps } from "./text";
 
 interface AnchorProps extends React.HtmlHTMLAttributes<HTMLAnchorElement> {
     variant: `${NonNullable<textStylesProps['font']>}/${NonNullable<textStylesProps['size']>}`
