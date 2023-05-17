@@ -21,7 +21,6 @@ export default function Heading({ variants = 'saver/large', color = 'white', hea
                     {children}
                 </h1>
             )
-            break
 
         case "h2":
             return (
@@ -29,7 +28,6 @@ export default function Heading({ variants = 'saver/large', color = 'white', hea
                     {children}
                 </h2>
             )
-            break
 
         default:
             return (<>{children}</>)
