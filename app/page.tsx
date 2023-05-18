@@ -1,13 +1,25 @@
 
+import Card from '@/components/landing/card'
+import Features from '@/components/landing/features'
 import Header from '@/components/landing/header'
 import MainView from '@/components/landing/main-view'
+import Slogan from '@/components/landing/slogan'
+
 
 export default function Home() {
   return (
     <>
-      <div className='m-auto p-3 xl:w-4/5 xl:p-0 h-[200vh] perspective-5'>
-        <Header />
-        <MainView />
+      <div className='m-auto p-3 xl:w-4/5 xl:p-0 perspective-5'>
+        <div className="content z-10">
+          <Header />
+          <MainView className=' my-40' />
+          <Slogan className='my-40' />
+        </div>
+
+        <div className=' my-40 h-28 bg-pink blur-[364px]'>
+        </div>
+
+        <Features />
       </div>
     </>
   )
