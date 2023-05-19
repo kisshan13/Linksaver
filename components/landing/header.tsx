@@ -1,4 +1,4 @@
-import Brand from '@/public/landing/logo.svg'
+import Brand from '@/public/logo.svg'
 
 import Link from 'next/link'
 import Image from 'next/image'

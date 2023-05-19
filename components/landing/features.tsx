@@ -1,9 +1,13 @@
+'use client'
+
 import createPng from '@/public/landing/cards/create.png'
 import collectPng from '@/public/landing/cards/collect.png'
 import managePng from '@/public/landing/cards/manage.png'
 import Card, { CardProps } from './card'
+import { cn } from '@/lib/utils'
+import { motion } from 'framer-motion'
 
-export default function Features() {
+export default function Features({ className }: { className?: string }) {
 
 
     const cardInfo: CardProps[] = [
@@ -30,15 +34,21 @@ export default function Features() {
     ]
 
     return (
-        <div className=' flex flex-wrap items-center justify-around'>
+        <div className={cn([' flex flex-wrap items-center justify-around', className])}>
             {
                 cardInfo.map(info => (
-                    <Card
-                        image={info.image}
-                        heading={info.heading}
-                        text={info.text}
-                        buttonText={info.buttonText}
-                    />
+                    <motion.div
+                        initial={{ y: 300, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 1, ease: 'anticipate' }}>
+                        <Card
+                            className=' my-8'
+                            image={info.image}
+                            heading={info.heading}
+                            text={info.text}
+                            buttonText={info.buttonText}
+                        />
+                    </motion.div>
                 ))
             }
         </div>

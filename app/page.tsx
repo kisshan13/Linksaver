@@ -1,6 +1,7 @@
 
 import Card from '@/components/landing/card'
 import Features from '@/components/landing/features'
+import Footer from '@/components/landing/footer'
 import Header from '@/components/landing/header'
 import MainView from '@/components/landing/main-view'
 import Slogan from '@/components/landing/slogan'
@@ -19,7 +20,10 @@ export default function Home() {
         <div className=' my-40 h-28 bg-pink blur-[364px]'>
         </div>
 
-        <Features />
+        <Features className=' -translate-y-36' />
+      </div>
+      <div className=' bg-pink py-6'>
+        <Footer className=' bg-pink xl:w-4/5 xl:p-0 m-auto'/>
       </div>
     </>
   )

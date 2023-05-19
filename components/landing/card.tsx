@@ -4,8 +4,6 @@ import Image, { StaticImageData } from "next/image";
 
 import Heading from "../ui/heading";
 import Text from "../ui/text";
-
-import Manage from '@/public/landing/cards/manage.png'
 import Button from "../ui/button";
 
 export interface CardProps {
