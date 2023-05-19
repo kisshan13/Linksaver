@@ -1,4 +1,6 @@
 
+import { Metadata } from 'next'
+
 import Card from '@/components/landing/card'
 import Features from '@/components/landing/features'
 import Footer from '@/components/landing/footer'
@@ -6,6 +8,10 @@ import Header from '@/components/landing/header'
 import MainView from '@/components/landing/main-view'
 import Slogan from '@/components/landing/slogan'
 
+export const metadata: Metadata = {
+  title: 'LinkSaver - Your own link organizer',
+  description: 'Linksaver provides best way to organize your links, sharing and collection of links you love.',
+}
 
 export default function Home() {
   return (
