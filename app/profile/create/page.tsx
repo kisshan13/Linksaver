@@ -5,6 +5,7 @@ import { Metadata } from "next"
 
 import logo from '@/public/logo.svg'
 import Heading from "@/components/ui/heading"
+import LoginCard from "@/components/login-card"
 
 export const metadata: Metadata = {
     title: 'Create your profile'
@@ -26,6 +27,8 @@ export default async function Page() {
 
             <main>
                 <Heading className="font-semibold text-center">Create your <span className=" font-semibold text-pink">profile !!</span></Heading>
+
+                <LoginCard />
             </main>
         </div>
     )
