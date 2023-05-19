@@ -22,7 +22,7 @@ export default function Home() {
 
         <Features className=' -translate-y-36' />
       </div>
-      <div className=' bg-pink py-6'>
+      <div className=' bg-pink py-6 xl:px-0 px-4'>
         <Footer className=' bg-pink xl:w-4/5 xl:p-0 m-auto'/>
       </div>
     </>

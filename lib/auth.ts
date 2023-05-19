@@ -1,17 +1,20 @@
 import { NextAuthOptions } from "next-auth";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import GoogleProvider from "next-auth/providers/google"
+import GithubProvider from "next-auth/providers/github"
 import { prisma } from "./prisma";
 
 function getClientCredentials() {
 
-    const clientId = process.env.GOOLGE_CLIENT_ID
-    const clientSecret = process.env.GOOGLE_CLIENT_SECRET
+    const googleClientId = process.env.GOOLGE_CLIENT_ID
+    const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET
 
-    if (typeof clientId === 'string' &&
-        typeof clientSecret === 'string') {
+    const githubClientId = process.env.GITHUB_CLIENT_ID
+    const githubClientSecret = process.env.GITHUB_CLIENT_SECRET
+
+    if (googleClientId && googleClientSecret && githubClientId && githubClientSecret) {
         return {
-            clientId, clientSecret
+            googleClientId, googleClientSecret, githubClientId, githubClientSecret
         }
     }
 
@@ -28,8 +31,13 @@ export const authOptions: NextAuthOptions = {
     },
     providers: [
         GoogleProvider({
-            clientId: getClientCredentials().clientId,
-            clientSecret: getClientCredentials().clientSecret
+            clientId: getClientCredentials().googleClientId,
+            clientSecret: getClientCredentials().googleClientSecret
+        }),
+
+        GithubProvider({
+            clientId: getClientCredentials().githubClientId,
+            clientSecret: getClientCredentials().githubClientSecret
         })
     ],
     callbacks: {
