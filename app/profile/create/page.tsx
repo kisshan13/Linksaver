@@ -5,11 +5,14 @@ import { Metadata } from "next"
 
 import logo from '@/public/logo.svg'
 import Heading from "@/components/ui/heading"
-import LoginCard from "@/components/login-card"
+import LoginCard, { LoginCardProps } from "@/components/login-card"
+
+import googleSvg from '@/public/svg/google.svg'
+import githubSvg from '@/public/svg/github.svg'
 
 export const metadata: Metadata = {
     title: 'Create your profile'
-  }
+}
 
 export default async function Page() {
 
@@ -18,6 +21,11 @@ export default async function Page() {
     if (user) {
         redirect('/')
     }
+
+    const loginCardDetails: LoginCardProps[] = [
+        { provider: 'google', text: 'Signup using Google', image: googleSvg },
+        { provider: 'github', text: 'Signup using Github', image: githubSvg },
+    ]
 
     return (
         <div className="m-auto p-3 xl:w-4/5 xl:p-0">
@@ -28,7 +36,16 @@ export default async function Page() {
             <main>
                 <Heading className="font-semibold text-center">Create your <span className=" font-semibold text-pink">profile !!</span></Heading>
 
-                <LoginCard />
+                <div>
+                    {
+                        loginCardDetails.map(detail => (
+                            <LoginCard
+                                image={detail.image}
+                                provider={detail.provider}
+                                text={detail.text} />
+                        ))
+                    }
+                </div>
             </main>
         </div>
     )
