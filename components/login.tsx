@@ -24,7 +24,7 @@ export default function Login() {
     async function handleClick(provider: LiteralUnion<BuiltInProviderType>) {
         setClicked(true)
         await signIn(provider, {
-            callbackUrl: '/profile',
+            callbackUrl: '/onboard',
         })
         setClicked(false)
     }

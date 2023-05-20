@@ -2,8 +2,8 @@ import getCurrentProfile from "@/lib/sessions"
 import Image from "next/image"
 import { redirect } from 'next/navigation'
 import { Metadata } from "next"
-import logo from '@/public/logo.svg'
 import Login from "@/components/login"
+import Header from "@/components/header"
 
 
 export const metadata: Metadata = {
@@ -20,11 +20,9 @@ export default async function Page() {
 
     return (
         <div className="m-auto p-3 xl:w-4/5 xl:p-0">
-            <header className=" my-4">
-                <Image src={logo} alt="linksaver" />
+            <Header />
 
-                <Login />
-            </header>
+            <Login />
         </div>
     )
 }

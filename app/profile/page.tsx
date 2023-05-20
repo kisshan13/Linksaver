@@ -1,14 +1,20 @@
-'use client'
-
+import Header from "@/components/header"
+import { ProfileSubmission } from "@/components/on-boarding/profile-submission"
 import Text from "@/components/ui/text"
-import { useRouter } from "next/navigation"
+import getCurrentProfile from "@/lib/sessions"
+import { redirect } from "next/navigation"
 
-export default function Profile() {
+export default async function Profile() {
 
-    const router = useRouter()
+    // const user = await getCurrentProfile()
+
+    // if (!user) {
+    //     redirect('/profile/create')
+    // }
+
     return (
-        <div className=" w-screen h-screen justify-center items-center">
-            
+        <div>
+            <Header />
         </div>
     )
 } 
