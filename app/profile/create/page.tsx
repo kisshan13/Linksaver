@@ -2,6 +2,7 @@ import getCurrentProfile from "@/lib/sessions"
 import Image from "next/image"
 import { redirect } from 'next/navigation'
 import { Metadata } from "next"
+import Text from "@/components/ui/text"
 
 import logo from '@/public/logo.svg'
 import Heading from "@/components/ui/heading"
@@ -33,10 +34,10 @@ export default async function Page() {
                 <Image src={logo} alt="linksaver" />
             </header>
 
-            <main>
+            <main className=" mt-12">
                 <Heading className="font-semibold text-center">Create your <span className=" font-semibold text-pink">profile !!</span></Heading>
 
-                <div>
+                <div className=" max-w-max m-auto mt-28 flex flex-col justify-center gap-12">
                     {
                         loginCardDetails.map(detail => (
                             <LoginCard
@@ -46,6 +47,8 @@ export default async function Page() {
                         ))
                     }
                 </div>
+
+                <Text className=" text-center opacity-50 hover:opacity-100 cursor-pointer my-24 underline underline-offset-8">By signing up with us, you agree to our terms and condition as well.</Text>
             </main>
         </div>
     )

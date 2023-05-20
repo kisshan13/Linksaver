@@ -19,7 +19,7 @@ export interface LoginCardProps {
 export default function LoginCard({ className, image, provider, text }: LoginCardProps) {
     return (
 
-        <Button variants="filled" className={cn([" px-5 py-3 flex gap-7 items-center", className])} onClick={() => signIn(provider)}>
+        <Button variants="filled" className={cn([" px-5 py-3 flex gap-7 items-center max-w-fit", className])} onClick={() => signIn(provider)}>
             <Image src={image} width={35} alt='google' />
             <Text color="black">{text}</Text>
         </Button>
