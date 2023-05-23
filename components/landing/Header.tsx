@@ -2,7 +2,7 @@ import Brand from '@/public/landing/logo.svg'
 
 import Link from 'next/link'
 import Image from 'next/image'
-import Navbar from './navbar'
+import Navbar from './Navbar'
 
 export default function Header() {
     return (
