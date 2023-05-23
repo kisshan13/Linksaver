@@ -11,21 +11,24 @@ export default function Features() {
             image: createPng,
             heading: 'Create',
             text: 'Create collections for saving your links.',
-            buttonText: 'Create your profile'
+            buttonText: 'Create your profile',
+            key: 1
         },
 
         {
             image: managePng,
             heading: 'Manage',
             text: 'manage all of your saved links at one place...',
-            buttonText: 'Manage your links'
+            buttonText: 'Manage your links',
+            key: 2,
         },
 
         {
             image: collectPng,
             heading: 'Collect',
             text: 'Explore communities and collect some cool links out there...',
-            buttonText: 'Popular Communities'
+            buttonText: 'Popular Communities',
+            key: 3
         }
     ]
 
@@ -34,6 +37,7 @@ export default function Features() {
             {
                 cardInfo.map(info => (
                     <Card
+                        key={info.key}
                         image={info.image}
                         heading={info.heading}
                         text={info.text}

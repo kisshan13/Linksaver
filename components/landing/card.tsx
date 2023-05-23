@@ -10,6 +10,7 @@ import Button from "../ui/button";
 
 export interface CardProps {
     className?: string,
+    key: number
     image: StaticImageData,
     heading: string,
     text: string,

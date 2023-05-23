@@ -15,7 +15,7 @@ export default function Slogan({ className }: { className?: string }) {
         >
             {
                 slogans.map(s => (
-                    <Heading className=" font-bold my-3 transition-all opacity-40 hover:text-pink hover:opacity-100">
+                    <Heading className=" font-bold my-3 transition-all opacity-40 hover:text-pink hover:opacity-100" key={s}>
                         {s}
                     </Heading>
                 ))
