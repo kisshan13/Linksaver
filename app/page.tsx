@@ -1,9 +1,9 @@
 
-import Card from '@/components/landing/card'
-import Features from '@/components/landing/features'
-import Header from '@/components/landing/header'
-import MainView from '@/components/landing/main-view'
-import Slogan from '@/components/landing/slogan'
+import Card from '@/components/landing/Card'
+import Features from '@/components/landing/Features'
+import Header from '@/components/landing/Header'
+import MainView from '@/components/landing/MainView'
+import Slogan from '@/components/landing/Slogan'
 
 
 export default function Home() {

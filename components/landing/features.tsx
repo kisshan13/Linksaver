@@ -1,7 +1,7 @@
 import createPng from '@/public/landing/cards/create.png'
 import collectPng from '@/public/landing/cards/collect.png'
 import managePng from '@/public/landing/cards/manage.png'
-import Card, { CardProps } from './card'
+import Card, { CardProps } from './Card'
 
 export default function Features() {
 

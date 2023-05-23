@@ -2,11 +2,11 @@ import { cn } from "@/lib/utils";
 
 import Image, { StaticImageData } from "next/image";
 
-import Heading from "../ui/heading";
-import Text from "../ui/text";
+import Heading from "../ui/Heading";
+import Text from "../ui/Text";
 
 import Manage from '@/public/landing/cards/manage.png'
-import Button from "../ui/button";
+import Button from "../ui/Button";
 
 export interface CardProps {
     className?: string,

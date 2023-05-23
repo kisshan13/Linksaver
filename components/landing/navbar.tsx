@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Text from "../ui/text"
+import Text from "../ui/Text"
 
 type navlink = { text: string, href: string }
 
