@@ -13,12 +13,29 @@ export async function GET(request: Request) {
     }
 
     try {
+        let isUsernamExist = await prisma.profile.findFirst({
+            where: {
+                username: username
+            }
+        })
 
+        if (!isUsernamExist) {
+            return NextResponse.json({
+                success: true,
+                username: 'not-exist'
+            })
+        }
+
+        return NextResponse.json({
+            success: true,
+            username: 'exist'
+        })
     }
 
-    catch(e) {
-        
+    catch (e) {
+        return NextResponse.json({
+            success: false,
+            error: 'Internal server error'
+        })
     }
-
-    return NextResponse.json({ username })
 }
