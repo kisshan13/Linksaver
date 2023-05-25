@@ -1,13 +1,11 @@
 'use client'
 
 import UsernameInput from "./UsernameInput"
-import Text from "../ui/Text"
 import { UsernameInputStates } from "./UsernameInput"
 
-import { useEffect } from 'react'
-
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useDebounce } from "@/hooks/debounced"
+import { CheckRouteReturn } from "@/app/api/profile/check/route"
 
 function mock(u: string) {
     let username = ['dodv6', 'dodv5', 'kishan']
@@ -26,13 +24,16 @@ export function ProfileSubmission() {
     const debouncedUsername = useDebounce(username, 500)
 
     useEffect(() => {
-
         (async () => {
+            setState('not-typing')
             if (debouncedUsername.length > 3) {
                 setState('checking')
-                let username = await mock(debouncedUsername)
-                typeof username === 'string' && username.length ?
-                    setState('exist') : setState('not-typing')
+                let response = await fetch(`/api/profile/check?username=${debouncedUsername}`)
+                let username: CheckRouteReturn = await response.json()
+                console.log(username)
+                username.username === 'exist' ?
+                    setState('exist') :
+                    setState('not-typing')
             }
         })()
     }, [debouncedUsername])

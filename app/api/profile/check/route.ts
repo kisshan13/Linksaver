@@ -1,6 +1,12 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
+export interface CheckRouteReturn {
+    success: boolean,
+    username?: 'exist' | 'not-exist'
+    error?: string
+}
+
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
     const username = searchParams.get('username')
