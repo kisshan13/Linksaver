@@ -43,8 +43,17 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
+  profiles      Profile[]
   accounts      Account[]
   sessions      Session[]
+}
+
+model Profile {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  username String  @unique
+  about    String
+  User     User?   @relation(fields: [userId], references: [id])
+  userId   String? @db.ObjectId
 }
 
 model VerificationToken {
