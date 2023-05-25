@@ -2,10 +2,10 @@
 
 import { useState } from "react"
 
-import { LoginCardProps } from "./ui/login-card"
-import Heading from "./ui/heading"
-import LoginCard from "./ui/login-card"
-import Text from "./ui/text"
+import { LoginCardProps } from "./ui/LoginCard"
+import Heading from "./ui/Heading"
+import LoginCard from "./ui/LoginCard"
+import Text from "./ui/Text"
 
 import googleSvg from '@/public/svg/google.svg'
 import githubSvg from '@/public/svg/github.svg'

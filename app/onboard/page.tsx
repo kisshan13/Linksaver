@@ -1,5 +1,5 @@
-import Header from "@/components/header";
-import { ProfileSubmission } from "@/components/on-boarding/profile-submission";
+import Header from "@/components/Header";
+import { ProfileSubmission } from "@/components/on-boarding/ProfileSubmission";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

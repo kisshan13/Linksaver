@@ -2,9 +2,9 @@ import { cn } from "@/lib/utils";
 
 import Image, { StaticImageData } from "next/image";
 
-import Heading from "../ui/heading";
-import Text from "../ui/text";
-import Button from "../ui/button";
+import Heading from "../ui/Heading";
+import Text from "../ui/Text";
+import Button from "../ui/Button";
 
 export interface CardProps {
     className?: string,

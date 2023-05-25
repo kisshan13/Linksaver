@@ -2,8 +2,8 @@ import getCurrentProfile from "@/lib/sessions"
 import Image from "next/image"
 import { redirect } from 'next/navigation'
 import { Metadata } from "next"
-import Login from "@/components/login"
-import Header from "@/components/header"
+import Login from "@/components/Login"
+import Header from "@/components/Header"
 
 
 export const metadata: Metadata = {

@@ -1,8 +1,8 @@
 import brandSvg from '@/public/logo-black.svg'
 
 import Image from 'next/image'
-import Anchor from '../ui/anchor'
-import Text from '../ui/text'
+import Anchor from '../ui/Anchor'
+import Text from '../ui/Text'
 
 export default function Footer({ className }: { className?: string }) {
 

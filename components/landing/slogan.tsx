@@ -1,4 +1,4 @@
-import Heading from "../ui/heading";
+import Heading from "../ui/Heading";
 
 import { cn } from "@/lib/utils";
 

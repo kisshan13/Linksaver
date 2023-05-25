@@ -3,11 +3,9 @@
 import Link from "next/link"
 import Image from "next/image"
 
-import Heading from "../ui/heading"
-import Button from "../ui/button"
-import Text from "../ui/text"
-
-import { motion } from "framer-motion"
+import Heading from "../ui/Heading"
+import Button from "../ui/Button"
+import Text from "../ui/Text"
 
 import Box from '@/public/landing/elements/box.svg'
 import LinkA from '@/public/landing/elements/link.svg'

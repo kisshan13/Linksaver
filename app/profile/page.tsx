@@ -1,8 +1,4 @@
-import Header from "@/components/header"
-import { ProfileSubmission } from "@/components/on-boarding/profile-submission"
-import Text from "@/components/ui/text"
-import getCurrentProfile from "@/lib/sessions"
-import { redirect } from "next/navigation"
+import Header from "@/components/Header"
 
 export default async function Profile() {
 

@@ -1,12 +1,11 @@
 
 import { Metadata } from 'next'
 
-import Card from '@/components/landing/card'
-import Features from '@/components/landing/features'
-import Footer from '@/components/landing/footer'
-import Header from '@/components/landing/header'
-import MainView from '@/components/landing/main-view'
-import Slogan from '@/components/landing/slogan'
+import Features from '@/components/landing/Features'
+import Footer from '@/components/landing/Footer'
+import Header from '@/components/landing/Header'
+import MainView from '@/components/landing/MainView'
+import Slogan from '@/components/landing/Slogan'
 
 export const metadata: Metadata = {
   title: 'LinkSaver - Your own link organizer',

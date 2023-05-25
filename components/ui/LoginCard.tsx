@@ -1,8 +1,8 @@
 'use client'
 
-import Button from "./button"
+import Button from "./Button"
 import Link from "next/link"
-import Text from "./text"
+import Text from "./Text"
 
 import googleSvg from '@/public/svg/google.svg'
 import loaderSvg from '@/public/svg/loader.svg'
