@@ -10,5 +10,7 @@ export default async function getCurrentProfile() {
         }
     })
 
+    console.log(session?.user)
+
     return { user: session?.user, profile: profile }
 }

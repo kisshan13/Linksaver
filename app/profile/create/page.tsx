@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 export default async function Page() {
 
-    const { profile } = await getCurrentProfile()
-    if (profile) {
+    const { user, profile } = await getCurrentProfile()
+    if (user && profile ) {
         redirect(`/profile/${profile.username}`)
     }
 

@@ -9,9 +9,12 @@ interface ProfilePageProps {
 
 export default async function Profile({ params }: ProfilePageProps) {
 
-    const { profile } = await getCurrentProfile()
-
-    if (!(profile?.username === params.username)) { redirect('/') }
+    const { profile, user } = await getCurrentProfile()
+    console.log({
+        profile: profile,
+        user: user
+    })
+    if (!user) { redirect('/profile/create') }
 
     return (
         <>
