@@ -9,7 +9,6 @@ const bodySchema = z.object({
     about: z.string()
 })
 
-
 export async function POST(req: Request) {
     try {
         const session = await getServerSession(authOptions)
@@ -29,7 +28,7 @@ export async function POST(req: Request) {
             data: {
                 userId: user.id,
                 username: body.username,
-                about: body.username
+                about: body.about
             }
         })
 

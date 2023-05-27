@@ -1,6 +1,6 @@
 import { cva, VariantProps } from 'cva'
 
-const buttonStyles = cva(['outline outline-1 transition-all active:shadow active:outline-2 px-4 py-2 rounded-md'], {
+const buttonStyles = cva(['outline outline-1 transition-all active:shadow active:outline-2 px-4 py-2 rounded-md disabled:cursor-not-allowed'], {
     variants: {
         intents: {
             filled: [
@@ -16,7 +16,7 @@ const buttonStyles = cva(['outline outline-1 transition-all active:shadow active
 
 type buttonStylesProps = VariantProps<typeof buttonStyles>
 
-export interface ButtonProps extends React.HtmlHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variants: `${NonNullable<buttonStylesProps['intents']>}`,
 }
 
