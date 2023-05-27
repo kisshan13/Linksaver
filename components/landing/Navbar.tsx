@@ -17,7 +17,7 @@ export default function Navbar() {
             <div className="hidden md:flex gap-9">
                 {
                     navitems.map(item => (
-                        <Link href={item.href}>
+                        <Link href={item.href} key={item.text}>
                             <Text className=" hover:text-pink">
                                 {item.text}
                             </Text>

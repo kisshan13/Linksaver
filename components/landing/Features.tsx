@@ -40,9 +40,9 @@ export default function Features({ className }: { className?: string }) {
                     <motion.div
                         initial={{ y: 300, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 1, ease: 'anticipate' }}>
+                        transition={{ duration: 1, ease: 'anticipate' }}
+                        key={info.text}>
                         <Card
-                            key={info.text}
                             className=' my-8'
                             image={info.image}
                             heading={info.heading}
