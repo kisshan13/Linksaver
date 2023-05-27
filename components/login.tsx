@@ -38,6 +38,7 @@ export default function Login() {
                     {
                         loginCardDetails.map(detail => (
                             <LoginCard
+                                key={detail.provider}
                                 onClick={() => handleClick(detail.provider)}
                                 image={detail.image}
                                 provider={detail.provider}

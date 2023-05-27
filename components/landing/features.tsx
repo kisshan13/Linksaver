@@ -42,6 +42,7 @@ export default function Features({ className }: { className?: string }) {
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 1, ease: 'anticipate' }}>
                         <Card
+                            key={info.text}
                             className=' my-8'
                             image={info.image}
                             heading={info.heading}
