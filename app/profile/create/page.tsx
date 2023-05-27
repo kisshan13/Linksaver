@@ -5,17 +5,15 @@ import { Metadata } from "next"
 import Login from "@/components/Login"
 import Header from "@/components/Header"
 
-
 export const metadata: Metadata = {
     title: 'Create your profile'
 }
 
 export default async function Page() {
 
-    const { user } = await getCurrentProfile()
-    console.log(user)
-    if (user) {
-        redirect('/')
+    const { profile } = await getCurrentProfile()
+    if (profile) {
+        redirect(`/profile/${profile.username}`)
     }
 
     return (

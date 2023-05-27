@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 import Heading from "../ui/Heading"
 import Button from "../ui/Button"
@@ -15,6 +16,9 @@ import Element from '@/public/landing/elements/element.svg'
 import { cn } from "@/lib/utils"
 
 export default function MainView({ className }: { className?: string }) {
+
+    const router = useRouter()
+
     return (
         <>
             <div className={cn(["relative max-w-max mx-auto perspective-origin-center mt-40 flex flex-col items-center", className])}>
@@ -24,15 +28,14 @@ export default function MainView({ className }: { className?: string }) {
                     where to <span className=" text-pink">save links..</span>
                 </Heading>
 
-                <Button variants="filled" className=" my-6 relative">
+                <Button variants="filled" className=" my-6 relative" onClick={() => router.push('/profile/create')}>
                     <div className=" absolute w-full h-full bg-pink blur-[100px]"></div>
-                    <Link href={'/'} className=" z-10">
+                    <Link href={'/profile/create'} className=" z-10">
                         <Text color="black" className=" px-11 font-medium">
-                            Search Links
+                            Create a profile
                         </Text>
                     </Link>
                 </Button>
-
 
                 <Image src={Box} alt="box" className=" hidden xl:block absolute xl:-left-1/3 -left-1/4 bottom-0 translate-z-12" />
                 <Image src={LinkA} alt="link-a" className=" hidden xl:block absolute xl:-right-1/3 bottom-0 translate-z-5" />
